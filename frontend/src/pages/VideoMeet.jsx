@@ -138,9 +138,6 @@ export default function VideoMeetComponent() {
 
     }
 
-
-
-
     let getUserMediaSuccess = (stream) => {
         try {
             window.localStream.getTracks().forEach(track => track.stop())
@@ -268,9 +265,7 @@ export default function VideoMeetComponent() {
         }
     }
 
-
-
-
+ 
     let connectToSocketServer = () => {
         socketRef.current = io.connect(server_url, { secure: false })
 
@@ -330,7 +325,7 @@ export default function VideoMeetComponent() {
                                 videoRef.current = updatedVideos;
                                 return updatedVideos;
                             });
-                        }
+                        };
                     };
 
 
@@ -431,7 +426,7 @@ export default function VideoMeetComponent() {
 
     let sendMessage = () => {
         console.log(socketRef.current);
-        socketRef.current.emit('chat-message', message, username);
+        socketRef.current.emit("chat-message", message, username);
         setMessage("");
 
         // this.setState({ message: "", sender: username })
@@ -443,26 +438,17 @@ export default function VideoMeetComponent() {
         getMedia();
     }
 
-
     return (
         <div>
-
             {askForUsername === true ?
-
                 <div>
-
-
                     <h2>Enter into Lobby </h2>
                     <TextField id="outlined-basic" label="Username" value={username} onChange={e => setUsername(e.target.value)} variant="outlined" />
                     <Button variant="contained" onClick={connect}>Connect</Button>
-
-
                     <div>
                         <video ref={localVideoref} autoPlay muted></video>
                     </div>
-
                 </div> :
-
 
                 <div className={styles.meetVideoContainer}>
 
@@ -471,31 +457,29 @@ export default function VideoMeetComponent() {
                         <div className={styles.chatContainer}>
                             <h1>Chat</h1>
 
-                            <div className={styles.chattingDisplay}>
+                             <div className={styles.chattingDisplay}>
 
-                                {messages.length !== 0 ? messages.map((item, index) => {
+                               {messages.length !== 0 ? messages.map((item, index) => {
 
                                     console.log(messages)
                                     return (
                                         <div style={{ marginBottom: "20px" }} key={index}>
                                             <p style={{ fontWeight: "bold" }}>{item.sender}</p>
                                             <p>{item.data}</p>
+                                            
                                         </div>
                                     )
                                 }) : <p>No Messages Yet</p>}
-
-
-                            </div>
+                            </div> 
 
                             <div className={styles.chattingArea}>
-                                <TextField value={message} onChange={(e) => setMessage(e.target.value)} id="outlined-basic" label="Enter Your chat" variant="outlined" />
+                                 <TextField value={message} onChange={(e) => setMessage(e.target.value)} id="outlined-basic" label="Enter Your chat" variant="outlined" />
                                 <Button variant='contained' onClick={sendMessage}>Send</Button>
-                            </div>
-
+                             </div>
 
                         </div>
-                    </div> : <></>}
-
+                     </div> : <></>} 
+       
 
                     <div className={styles.buttonContainers}>
                         <IconButton onClick={handleVideo} style={{ color: "white" }}>

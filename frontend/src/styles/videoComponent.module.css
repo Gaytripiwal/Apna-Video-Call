@@ -1,4 +1,4 @@
-.meetVideoContainer {
+/* .meetVideoContainer {
     position: relative;
     height: 100vh;
     background: rgb(1, 4, 48);
@@ -55,6 +55,74 @@
 }
 
 
+.chattingArea {
+    position: absolute;
+    bottom: 0;
+} */
+
+/* Main video container styling */
+.meetVideoContainer {
+    position: relative;
+    height: 100vh;
+    background: rgb(1, 4, 48); /* Dark blue background */
+}
+
+/* User's own video position and styling */
+.meetUserVideo {
+    position: absolute;
+    bottom: 10vh;
+    height: 20vh;
+    width: auto;
+    left: 0;
+    border-radius: 20px; /* Rounded corners */
+}
+
+/* Button container for video controls */
+.buttonContainers {
+    position: absolute;
+    width: 100vw;
+    bottom: 0;
+    text-align: center;
+}
+
+/* Styling for icons inside buttons */
+.buttonContainers svg {
+    font-size: 3rem;
+}
+
+/* Conference view container */
+.conferenceView { 
+    display: flex;
+    padding: 10px;
+    gap: 10px; /* Space between videos */
+}
+
+/* Styling for conference call videos */
+.conferenceView video {
+    width: 40vw;
+    height: 20vh;
+    min-width: 30vw;
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Chat box container */
+.chatRoom {
+    position: absolute;
+    height: 90vh;
+    right: 0;
+    background: white;
+    border-radius: 10px;
+    width: 30vw;
+    padding-inline: 20px; /* Padding inside chat box */
+}
+
+/* Chat container to hold messages */
+.chatContainer {
+    position: relative;
+    height: 100%;
+}
+
+/* Input area for sending messages */
 .chattingArea {
     position: absolute;
     bottom: 0;

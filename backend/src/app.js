@@ -19,7 +19,7 @@ const server = createServer(app);
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// ✅ Enable CORS for Express
+// Enable CORS for Express
 app.use(
   cors({
     origin: "http://localhost:3000", // Allow frontend origin
@@ -28,7 +28,7 @@ app.use(
   })
 );
 
-// ✅ Enable CORS for Socket.IO
+//  Enable CORS for Socket.IO
 const io = new Server(server, {
   cors: {
     origin: "http://localhost:3000", // Allow frontend
@@ -51,24 +51,24 @@ app.use("/api/v1/users", userRoutes);
 
 // Fix: Add Home Route
 app.get("/", (req, res) => {
-  res.send("🚀 Server is running on port " + app.get("port"));
+  res.send(" Server is running on port " + app.get("port"));
 });
 
 // MongoDB Connection & Server Start
 const start = async () => {
   try {
     const connectionDb = await mongoose.connect(process.env.MONGO_URI);
-    console.log(`✅ MongoDB Connected: ${connectionDb.connection.host}`);
+    console.log(` MongoDB Connected: ${connectionDb.connection.host}`);
 
     // Start server after DB is connected
     const PORT = process.env.PORT || 8000;
     app.set("port", PORT);
     server.listen(PORT, () => {
-      console.log(`🚀 Server running on http://localhost:${PORT}`);
+      console.log(` Server running on http://localhost:${PORT}`);
     });
 
   } catch (error) {
-    console.error("❌ MongoDB Connection Error:", error);
+    console.error(" MongoDB Connection Error:", error);
     process.exit(1); // Exit if DB connection fails
   }
 };
