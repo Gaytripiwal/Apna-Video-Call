@@ -1,4 +1,6 @@
-/* * {
+
+/* Reset default margin, padding, and enable box-sizing for all elements */
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -16,28 +18,4 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-} */
-
-
-/* Reset default margin, padding, and enable box-sizing for all elements */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Global body styling */
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif; /* Sets a list of preferred fonts */
-  -webkit-font-smoothing: antialiased; /* Improves text rendering on WebKit browsers */
-  -moz-osx-font-smoothing: grayscale; /* Improves text rendering on macOS */
-}
-
-/* Styling for <code> elements (monospace font) */
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+} 

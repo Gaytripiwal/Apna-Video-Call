@@ -6,23 +6,21 @@ import cors from "cors";
 import path from "path";
 import { fileURLToPath } from "url";
 import dotenv from "dotenv";
-
 import { connectToSocket } from "./controllers/socketManager.js";
 import userRoutes from "./routes/users.routes.js";
 
-dotenv.config(); // Load environment variables
-
+dotenv.config(); 
 const app = express();
 const server = createServer(app);
 
-// Fix for __dirname in ES module
+// Fix for  dirname in ES module
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Enable CORS for Express
 app.use(
   cors({
-    origin: "http://localhost:3000", // Allow frontend origin
+   // origin: "http://localhost:3000", 
     methods: ["GET", "POST"], 
     credentials: true,
   })
@@ -31,13 +29,13 @@ app.use(
 //  Enable CORS for Socket.IO
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000", // Allow frontend
+    origin: "http://localhost:3000",
     methods: ["GET", "POST"],
     credentials: true,
   },
 });
 
-connectToSocket(io); // Pass io instance to socketManager
+connectToSocket(io); 
 
 app.use(express.json({ limit: "40kb" }));
 app.use(express.urlencoded({ limit: "40kb", extended: true }));

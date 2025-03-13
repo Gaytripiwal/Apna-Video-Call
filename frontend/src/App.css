@@ -1,4 +1,4 @@
- /* .landingPageContainer {
+ .landingPageContainer {
   width: 100vw;
   height: 100vh;
   background: url("/public/background.png");
@@ -16,6 +16,7 @@
 
 }
 
+/* Navigation bar heading */
 .landingPageContainer nav h2 {
   font-size: 1.8rem;
   font-weight: 500;
@@ -48,116 +49,15 @@
   margin-top: 1.9rem;
 }
 
+/* "Get Started" button link styling */
 .landingMainContainer>div:nth-child(1) div[role='button'] a {
   text-decoration: none;
   color: white;
   font-size: 1.7rem;
 }
 
+
 .landingMainContainer>div:nth-child(2) img {
-  height: 70vh;
-  width: auto;
-}
-
-.navBar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-inline: 20px;
-  text-align: center;
-
-}
-.meetContainer {
-  display: flex;
-  padding-inline: 20px;
-  height: 80vh;
-  gap: 10vw;
-  justify-content: center;
-}
-
-.leftPanel {
-  height: 100%;
-  display: flex;
-  align-items: center;
-
-}
-
-.rightPanel {
-  display: flex;
-  align-items: center;
-}
-
-.rightPanel > img {
-  width: 30vw;
-  height: auto;
-  border-radius: 20px;
-}  */
-
-
-/*  Main landing page container  */
-.landingPageContainer {
-  width: 100vw;
-  height: 100vh;
-  background: url("/public/background.png"); 
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: white; /* Text color */
-}
-
-/* Navigation bar styling */
-.landingPageContainer nav {
-  padding-inline: 1.2rem;
-  padding-block: 1.6rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Navigation bar heading */
-.landingPageContainer nav h2 {
-  font-size: 1.8rem;
-  font-weight: 500;
-}
-
-/* Navigation menu list */
-.landingPageContainer nav .navlist {
-  display: flex;
-  gap: 1.6rem;
-  cursor: pointer;
-}
-
-/* Main landing content container */
-.landingMainContainer {
-  display: flex;
-  justify-content: space-between;
-  padding-inline: 3rem;
-  height: 80vh;
-  align-items: center;
-}
-
-/* Left side of the landing page (text content) */
-.landingMainContainer > div:nth-child(1) {
-  font-size: 2.2rem;
-}
-
-/* "Get Started" button styling */
-.landingMainContainer > div:nth-child(1) div[role='button'] {
-  background: #D97500; /* Button background color */
-  width: fit-content;
-  padding: 1rem;
-  border-radius: 20px;
-  margin-top: 1.9rem;
-}
-
-/* "Get Started" button link styling */
-.landingMainContainer > div:nth-child(1) div[role='button'] a {
-  text-decoration: none;
-  color: white;
-  font-size: 1.7rem;
-}
-
-/* Image on the right side of the landing page */
-.landingMainContainer > div:nth-child(2) img {
   height: 70vh;
   width: auto;
 }
@@ -169,9 +69,8 @@
   justify-content: space-between;
   padding-inline: 20px;
   text-align: center;
-}
 
-/* Container for the video call section */
+}
 .meetContainer {
   display: flex;
   padding-inline: 20px;
@@ -180,22 +79,20 @@
   justify-content: center;
 }
 
-/* Left panel (text and input fields) */
 .leftPanel {
   height: 100%;
   display: flex;
   align-items: center;
+
 }
 
-/* Right panel (image) */
 .rightPanel {
   display: flex;
   align-items: center;
 }
 
-/* Image inside the right panel */
 .rightPanel > img {
   width: 30vw;
   height: auto;
   border-radius: 20px;
-} 
+}  
